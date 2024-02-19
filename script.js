@@ -10,7 +10,12 @@ var selectedSeats = [];
             }
         }
 
-
+        document.getElementById("Cusnumber").addEventListener("keyup", enableSubmit)
+        function calculateTotal() {
+            let totalPrice  = 550 * selectedSeats.length;
+            document.getElementById("TotalPrice").innerText = totalPrice;
+   
+        }
         function handleClick(button) {
             if (selectedSeats.length<4) {
                 var innerText = button.innerText;
@@ -19,7 +24,6 @@ var selectedSeats = [];
             button.classList.add("bg-green-400");
             button.classList.remove("bg-gray-200");
             button.disabled = true; 
-            console.log(selectedSeats);
             setTotalSet();
             enableSubmit();
             calculateTotal();
@@ -40,8 +44,6 @@ var selectedSeats = [];
                 li.textContent = "550";
                 ul.appendChild(li);
              outputDiv.appendChild(ul);
-
-            // show sit info end
             let sitLeft = document.getElementById("sitLeft").innerText;
             document.getElementById("sitLeft").innerText = sitLeft - 1;
             if (selectedSeats.length==4) {
@@ -73,10 +75,4 @@ var selectedSeats = [];
                 openPopup("Invalid Coupon Code");
             }
             
-         }
-         document.getElementById("Cusnumber").addEventListener("keyup", enableSubmit)
-         function calculateTotal() {
-             let totalPrice  = 550 * selectedSeats.length;
-             document.getElementById("TotalPrice").innerText = totalPrice;
-    
          }

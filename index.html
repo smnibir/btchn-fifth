@@ -54,12 +54,12 @@
         </header>
         <!-- banner section -->
         <section class="bg-[url('images/banner.png')] bg-no-repeat bg-cover text-white p-36 h-[600px] text-center ">
-            <h1 class="text-[64px] font-extrabold">End-to-End Travel with <br><span class="text-[#1DD100]"> P Paribahan</span></h1>
+            <h1 class="text-[24px] lg:text-[64px] font-extrabold">End-to-End Travel with <br><span class="text-[#1DD100]"> P Paribahan</span></h1>
             <p class="text-lg">Yes, you can run unit tests and view the results directly within the app. The <br>integrated testing features allow for a streamlined .</p>
-            <a class="bg-[#1DD100] btn border-none font-bold mt-5" href="#buyticket">Buy Tickets</a>
+            <a class="bg-[#1DD100] btn border-none font-bold mt-5 " href="#buyticket">Buy Tickets</a>
         </section>
         <!-- achivement -->
-        <div class="flex gap-10 relative justify-center -mt-20 mx-28">
+        <div class="flex flex-col md:flex-row gap-10 relative justify-center -mt-20 mx-28">
             <section class="flex  flex-1 items-center gap-5 bg-white rounded-lg border-b-4 border-[#1DD100] p-5">
                 <img class="h-[64px]" src="images/people.png" alt="">
                 <div>
@@ -82,9 +82,9 @@
                 </div>
             </section>
         </div>
-        <!-- best offer section -->
+ 
         <h1 class="text-[40px] font-bold text-center mt-28 mb-6">Best offers for you</h1>
-        <div class="flex gap-10">
+        <div class="flex flex-col md:flex-row gap-10">
             <section class="flex flex-grow items-center h-40 bg-[#FFBF0F] rounded-lg">
                 <div class="flex-grow p-8">
                     <h2 class="text-[40px] font-black">15% OFF</h2>
@@ -161,7 +161,7 @@
             </div>
         </section>
         <section class="bg-white mt-4 container mx-auto rounded-lg p-5"> 
-            <div class="flex">
+            <div class="flex flex-col md:flex-row">
                 <div class="flex-grow border-dashed border-r border-gray-500 my-2 px-10">
                     <h2 class="text-2xl font-semibold ">Select Your Seat</h2>
                 <div class="flex justify-between border-dashed border-y border-gray-500 my-2 py-2">
@@ -291,8 +291,8 @@
                 </div>
                 <div class="flex-grow p-5">
                     <h2 class="text-2xl font-semibold border-dashed border-b border-gray-500 my-2 py-2">Select Your Seat</h2>
-                    <div class="bg-gray-200 p-5 ">
-                        <div class="flex font-bold justify-between border-dashed border-b border-gray-500 my-2 py-2">
+                    <div class="bg-gray-200 p-5 rounded">
+                        <div class="flex font-bold justify-between border-dashed border-b border-gray-500 my-2 py-2 rounded">
                             <p>Seat <span class="bg-green-500 text-white px-2 rounded-lg text-base font-normal" id="totalSit">0</span></p>
                             <p>Class</p>
                             <p>Price</p>
@@ -309,7 +309,7 @@
                             <p>Discount Price</p>
                             <p>BDT <span id="discountPrice">0</span></p>
                         </div>
-                        <label id="coupenAdd" class="input input-bordered items-center gap-2 flex">
+                        <label id="coupenAdd" class="input input-bordered items-center gap-2 flex place-content-between">
                             <input id="coupenVal" type="text" class="grow" placeholder="Have any copupon?" disabled />
                             <button id="couplenApplyBtn" class="badge btn badge-info bg-green-500 text-white rounded-md m-5 px-10" onclick="onCouponApply()">Apply</button>
                           </label>
